@@ -9,29 +9,34 @@
 First of all, you will need the following to get started:
 
 - An internet connection, to install all of the dependencies & accessing stylesheet for semantic ui.
-- [Node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/get-npm)
+- [Node.js](https://nodejs.org/en/) - v.10.15.0
+- [npm](https://www.npmjs.com/get-npm) - 6.4.1
 
 When you are sure your local environment includes all of the above requirements, do this:
 
-1. **Install dependencies**. Run this command in the terminal from the root of the project.
+**Heads up!** All scripts should be run from the root of the project :smile:
 
-   ```bash
-   npm run install:all
-   ```
+1. **Create a `.env` file**. Copy the content of `.env-example`. Then replace the values with real ones.
 
-2. **Start up the server**. Run this command in the terminal from the root of the project.
+2. **Install dependencies**.`npm run install:all`
 
-   ```bash
-   npm run start
-   ```
+3. Then, either:
 
-3. **Start the client**. Open up a new terminal tab or a new window (you get to decide :smile:).<br> Run following, it will use port [3000](http://localhost:3000):
-   ```bash
-   npm run start:client
-   ```
+- **Run the project in development mode**:
 
-### Formatting
+  - **Start up the server**. `npm run dev`
+
+  - **Start the client**. Open up a new terminal tab or a new window (you get to decide :smile:).<br> It will use port [3000](http://localhost:3000). `npm run start:client`
+
+- **To serve the built version of the front end**:
+
+  - **Build the front end part.** `npm run build:client`
+
+  - **Set environment variable**. Make sure the env-variable `NODE_ENV` is set to `production`, e.g. setting it in the `.env`-file.
+
+  - **Start the project**. `npm run start`
+
+## Formatting
 
 Prettier - exists as a plugin for most popular code editors. There is a config file included in the root of the project, `.prettierrc`.
 https://prettier.io/docs/en/editors.html
@@ -46,11 +51,12 @@ https://prettier.io/docs/en/editors.html
 
 **Back End**
 
-- Node
+- Node.js
 - Express - a framework for Node.js
 - Mongoose - a object modeling framework for Node.js & MongoDb
 - body-parser - for handling parsing of requests
 - dotenv - for handling ENV variables in development
+- nodemon - for hot-reloading in development
 
 **Database**
 
