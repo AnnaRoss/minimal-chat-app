@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const messageRouter = require('./routes/messages');
 
 const app = express();
 const port = process.env.SERVER_PORT || 3001;
@@ -18,6 +19,6 @@ mongoose
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => res.send('Here we go!'));
+app.use('/api/messages', messageRouter);
 
 app.listen(port, () => console.log(`Success! Listening on port ${port}`));
