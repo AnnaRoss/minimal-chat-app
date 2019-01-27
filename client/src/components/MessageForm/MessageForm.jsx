@@ -4,6 +4,7 @@ import { Form } from 'semantic-ui-react';
 const MessageForm = ({ onSubmit }) => (
   <Form onSubmit={onSubmit}>
     <Form.Input
+      required
       type="email"
       name="email"
       label="Email"
@@ -11,6 +12,7 @@ const MessageForm = ({ onSubmit }) => (
     />
     <Form.TextArea
       autoHeight
+      required
       name="text"
       label="Message"
       placeholder="Write your message here"

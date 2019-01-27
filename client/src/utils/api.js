@@ -12,9 +12,11 @@ export const createMessage = ({ email, text }) => {
     body: JSON.stringify(message),
   })
     .then((response) => response.json())
-    .then((newMessage) => newMessage);
+    .then(({ data }) => data);
 };
 
 export const retrieveAllMessages = () => {
-  return fetch('/api/messages').then((response) => response.json());
+  return fetch('/api/messages')
+    .then((response) => response.json())
+    .then(({ data }) => data);
 };
