@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container, Header } from 'semantic-ui-react';
 import { retrieveAllMessages, createMessage } from '../utils/api';
 import MessageForm from './MessageForm/MessageForm';
 import MessageFeed from './MessageFeed/MessageFeed';
@@ -27,10 +28,11 @@ class App extends Component {
   render() {
     const { messages } = this.state;
     return (
-      <React.Fragment>
+      <Container>
+        <Header as="h1">Minimal Chat</Header>
         <MessageFeed messages={messages} />
         <MessageForm handleCreateMessage={this.handleCreateMessage} />
-      </React.Fragment>
+      </Container>
     );
   }
 }
