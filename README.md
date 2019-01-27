@@ -40,9 +40,9 @@ https://prettier.io/docs/en/editors.html
 **Front End**
 
 - React - [Create React App](https://github.com/facebook/create-react-app) was used to initialize the front end part of this project
-- SemanticUI React - a React component library
-
-**Back End**
+- [SemanticUI React](https://react.semantic-ui.com/) - a React component library
+- [date-fns](https://date-fns.org/) - a library to format dates
+  **Back End**
 
 - Node
 - Express - a framework for Node.js
