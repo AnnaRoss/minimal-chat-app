@@ -16,11 +16,8 @@ class App extends Component {
     );
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    const [email, text] = event.target;
-
-    createMessage({ email: email.value, text: text.value }).then((newMessage) =>
+  handleCreateMessage = (message) => {
+    createMessage(message).then((newMessage) =>
       this.setState((prevState) => ({
         messages: [...prevState.messages, newMessage],
       }))
@@ -32,7 +29,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <MessageFeed messages={messages} />
-        <MessageForm onSubmit={this.handleSubmit} />
+        <MessageForm handleCreateMessage={this.handleCreateMessage} />
       </React.Fragment>
     );
   }
