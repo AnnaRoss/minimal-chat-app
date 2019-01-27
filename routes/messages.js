@@ -23,4 +23,18 @@ messageRouter.post('/', (req, res) => {
     );
 });
 
+messageRouter.get('/', (req, res) => {
+  Message.find()
+    .then((messages) =>
+      res.status(200).json({
+        data: messages,
+      })
+    )
+    .catch((error) => {
+      res.status(500).json({
+        errors: error,
+      });
+    });
+});
+
 module.exports = messageRouter;
