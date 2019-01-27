@@ -1,0 +1,24 @@
+{
+  "name": "minimal-chat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A very simple chat app",
+  "author": "Anna Ross",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "start:client": "cd client && npm run start",
+    "build:client": "cd client && npm run build",
+    "install:client": "cd client && npm install",
+    "install:all": "npm install && npm run install:client"
+  },
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.9"
+  }
+}
