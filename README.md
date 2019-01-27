@@ -8,7 +8,7 @@
 
 First of all, you will need the following to get started:
 
-- An internet connection, to install all of the dependencies
+- An internet connection, to install all of the dependencies & accessing stylesheet for semantic ui.
 - [Node.js](https://nodejs.org/en/)
 - [npm](https://www.npmjs.com/get-npm)
 
@@ -33,6 +33,7 @@ When you are sure your local environment includes all of the above requirements,
 
 ### Formatting
 
+Prettier - exists as a plugin for most popular code editors. There is a config file included in the root of the project, `.prettierrc`.
 https://prettier.io/docs/en/editors.html
 
 ## Tech Stack
@@ -42,7 +43,8 @@ https://prettier.io/docs/en/editors.html
 - React - [Create React App](https://github.com/facebook/create-react-app) was used to initialize the front end part of this project
 - [SemanticUI React](https://react.semantic-ui.com/) - a React component library
 - [date-fns](https://date-fns.org/) - a library to format dates
-  **Back End**
+
+**Back End**
 
 - Node
 - Express - a framework for Node.js
