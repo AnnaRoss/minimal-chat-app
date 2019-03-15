@@ -12,7 +12,8 @@
     "start:client": "cd client && npm run start",
     "build:client": "cd client && npm run build",
     "install:client": "cd client && npm install",
-    "install:all": "npm install && npm run install:client"
+    "install:all": "npm install && npm run install:client",
+    "build:run": "cd client && npm run build && cd .. && npm start"
   },
   "dependencies": {
     "body-parser": "1.18.3",
